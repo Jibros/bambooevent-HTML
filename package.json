@@ -9,6 +9,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.6.1"
-  }
+    "parcel": "^2.6.1",
+    "sass": "^1.53.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jibros/bambooevent-HTML.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jibros/bambooevent-HTML/issues"
+  },
+  "homepage": "https://github.com/Jibros/bambooevent-HTML#readme"
 }
