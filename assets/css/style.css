@@ -1,83 +1,885 @@
-@charset "utf-8";
-
-.wrapper {width:100%;margin:0;}
-.inner {width:100%;margin:0 auto;}
-
-@media only screen and (min-width: 1280px){
-    .inner {width:1280px;}
+:root {
+  font-size: 10px;
+}
+@media (max-width: 1279px) {
+  :root {
+    font-size: 0.7818608288vw;
+  }
 }
 
-#header {width:100%;height:52.8rem;background:url(/assets/images/pattern_visual.jpg) top center repeat-x;background-size:1rem;}
-#header .brand-logo {font-size:0;text-indent:-9999px;}
-
-.vod_box {overflow:hidden;position:relative;width:calc(100% - 8.4rem);height:0;margin:0 4.2rem;padding-top:56.25%;border:1.5rem solid #60d285;}
-.vod_box .vod {position:absolute;top:0;left:0;width:100%;height:100%;}
-
-/********** 이벤트 01 **********/
-.event01 {position:relative;background:#77d898}
-.event01:after {content:"";position:absolute;top:0;left:0;right:0;width:100%;height:4.4rem;background:url(/assets/images/pattern_wave1.jpg) top center repeat-x;background-size:19.2rem;}
-.event01 .btn_test {margin-bottom:17rem;}
-
-/********** 이벤트 02 **********/
-.event02 {position:relative;background:#fdea84 url(/assets/images/pattern_event2.jpg) bottom center repeat-x;background-size:1rem;}
-.event02:after {content:"";position:absolute;top:0;left:0;right:0;width:100%;height:4.6rem;background:url(/assets/images/pattern_wave2.jpg) top center repeat-x;background-size:19.2rem;}
-
-.reply_box {padding:0 6.8rem 15rem;}
-.reply_box > form {margin-bottom:3rem;font-size:0;}
-.reply_box > form:after {content:"";display:table;clear:both;}
-.reply_box .ipt-txt {display:inline-block;width:calc(100% - 29.2rem);height:8.1rem;margin-right:1.7rem;padding:0 3.2rem;border-radius:2rem;border:0;font-size:3.7rem;color:#e0cecd;line-height:8.1rem;}
-.reply_box .btn-submit {float:right;width:27.5rem;height:8.1rem;background:url(/assets/images/event1_btn.jpg) center center no-repeat;background-size:27.5rem;}
-.reply_box .reply_list {width:100%;margin-bottom:5.5rem;padding:2rem 6rem;border-radius:2rem;background-color:#fff;}
-.reply_box .reply_list ul li {height:5.2rem;}
-.reply_box .reply_list ul li:after {content:"";display:table;clear:both;}
-.reply_box .reply_list ul li > p {font-size:2.6rem;color:#6a6a6a;line-height:5.2rem;letter-spacing:-.4px;}
-.reply_box .reply_list ul li > p.tx_msg {float:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:calc(100% - 25rem);}
-.reply_box .reply_list ul li > p.tx_nm {float:right;width:20rem;text-align:right;}
-
-.reply_box .paging {display:flex;flex-wrap:nowrap;justify-content:space-between;}
-.reply_box .paging > a {flex:0 1 auto;width:8.4rem;height:8.4rem;border-radius:1.4rem;font-size:4.2rem;color:#9a9696;text-align:center;line-height:8.2rem;vertical-align:middle;background-color:#fff;transition:all .3s ease-in-out;-webkit-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;}
-.reply_box .paging > a:hover {opacity:.8}
-.reply_box .paging > a.on {color:#ffe96f;background-color:#6350aa;}
-.reply_box .paging > a.arrow {font-size:0;text-indent:-9999px;background-image:url(/assets/images/sprite_arrow.jpg);background-size:16.8rem}
-.reply_box .paging > a.arrow.first {background-position:0 0;}
-.reply_box .paging > a.arrow.prev {background-position:-8.4rem 0;}
-.reply_box .paging > a.arrow.last {background-position:0 -8.4rem;}
-.reply_box .paging > a.arrow.next {background-position:-8.4rem -8.4rem;}
-
-.notice {width:100%;background-color:#020101;}
-.notice .noti_info {padding:8rem 7.5rem;}
-.notice .noti_info > dt {margin-bottom:3.5rem;}
-.notice .noti_info > dt, 
-.notice .noti_info > dd {font-weight:300;font-size:2.6rem;color:#ada8a5;letter-spacing:-.4px;line-height:4.4rem;}
-
-.footer {width:100%;background:url(/assets/images/pattern_foot.jpg) top left repeat;background-size:128rem;}
-@media only screen and (max-width: 1279px){
-    #header,
-    .event01:after 
-    {height:auto;background:none;}
+.wrapper {
+  width: 100%;
+  margin: 0;
 }
 
-/* 
-@media only screen and (max-width: 1279px){
-    html {
-        font-size:8px;
-    }
-    #header,
-    .event01:after 
-    {height:auto;background:none;}
+.inner {
+  width: 100%;
+  margin: 0 auto;
 }
-@media only screen and (max-width: 639px){
-    html {
-        font-size:5px;
-    }
+
+@media only screen and (min-width: 1280px) {
+  .inner {
+    width: 1280px;
+  }
 }
-@media only screen and (max-width: 479px){
-    html {
-        font-size:4px;
-    }
+#header {
+  width: 100%;
+  height: 52.8rem;
+  background: url("/assets/images/pattern_visual.jpg") top center repeat-x;
+  background-size: 1rem;
 }
-@media only screen and (max-width: 320px){
-    html {
-        font-size:3px;
-    }
-} */
+#header .header__logo {
+  font-size: 0;
+  text-indent: -9999px;
+}
+
+.vodbox__rect {
+  overflow: hidden;
+  position: relative;
+  width: calc(100% - 8.4rem);
+  height: 0;
+  margin: 0 4.2rem;
+  padding-top: 51.25%;
+  border: 1.5rem solid #60d285;
+}
+.vodbox__rect .vodframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.evt {
+  position: relative;
+}
+
+.evt--1 {
+  background: #77d898;
+}
+.evt--1:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 4.4rem;
+  background: url("/assets/images/pattern_wave1.jpg") top center repeat-x;
+  background-size: 19.2rem;
+}
+.evt--1 .btn--test {
+  margin-bottom: 17rem;
+}
+
+.evt--2 {
+  background: #fdea84 url("/assets/images/pattern_event2.jpg") bottom center repeat-x;
+  background-size: 1rem;
+}
+.evt--2:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 4.6rem;
+  background: url("/assets/images/pattern_wave2.jpg") top center repeat-x;
+  background-size: 19.2rem;
+}
+
+.replybox {
+  padding: 0 6.8rem 15rem;
+}
+.replybox > form {
+  margin-bottom: 3rem;
+  font-size: 0;
+}
+.replybox > form:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.replybox .ipt--txt {
+  display: inline-block;
+  width: calc(100% - 29.2rem);
+  height: 8.1rem;
+  margin-right: 1.7rem;
+  padding: 0 3.2rem;
+  border-radius: 2rem;
+  border: 0;
+  font-size: 3.7rem;
+  color: #e0cecd;
+  line-height: 8.1rem;
+}
+.replybox .btn--submit {
+  float: right;
+  width: 27.5rem;
+  height: 8.1rem;
+  background: url("/assets/images/event1_btn.jpg") center center no-repeat;
+  background-size: 27.5rem;
+}
+.replybox .reply__list {
+  width: 100%;
+  margin-bottom: 5.5rem;
+  padding: 2rem 6rem;
+  border-radius: 2rem;
+  background-color: #fff;
+}
+.replybox .reply__list > ul li {
+  height: 5.2rem;
+}
+.replybox .reply__list > ul li:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.replybox .reply__list > ul li > p {
+  font-size: 2.6rem;
+  color: #6a6a6a;
+  line-height: 5.2rem;
+  letter-spacing: -0.4px;
+}
+.replybox .reply__list > ul li > p.tx_msg {
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: calc(100% - 25rem);
+}
+.replybox .reply__list > ul li > p.tx_nm {
+  float: right;
+  width: 20rem;
+  text-align: right;
+}
+.replybox .reply__paging {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.replybox .reply__paging > a {
+  flex: 0 1 auto;
+  width: 8.4rem;
+  height: 8.4rem;
+  border-radius: 1.4rem;
+  font-size: 4.2rem;
+  color: #9a9696;
+  text-align: center;
+  line-height: 8.2rem;
+  vertical-align: middle;
+  background-color: #fff;
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+}
+.replybox .reply__paging > a:hover {
+  opacity: 0.8;
+}
+.replybox .reply__paging > a.on {
+  color: #ffe96f;
+  background-color: #6350aa;
+}
+.replybox .reply__paging > a.arrow {
+  font-size: 0;
+  text-indent: -9999px;
+  background-image: url("/assets/images/sprite_arrow.jpg");
+  background-size: 16.8rem;
+}
+.replybox .reply__paging > a.arrow.first {
+  background-position: 0 0;
+}
+.replybox .reply__paging > a.arrow.prev {
+  background-position: -8.4rem 0;
+}
+.replybox .reply__paging > a.arrow.last {
+  background-position: 0 -8.4rem;
+}
+.replybox .reply__paging > a.arrow.next {
+  background-position: -8.4rem -8.4rem;
+}
+
+.notice {
+  width: 100%;
+  background-color: #020101;
+}
+.notice__info {
+  padding: 8rem 7.5rem;
+}
+.notice__info > dt {
+  margin-bottom: 3.5rem;
+  font-weight: 300;
+  font-size: 2.6rem;
+  color: #ada8a5;
+  letter-spacing: -0.4px;
+  line-height: 4.4rem;
+}
+.notice__info > dd {
+  font-weight: 300;
+  font-size: 2.6rem;
+  color: #ada8a5;
+  letter-spacing: -0.4px;
+  line-height: 4.4rem;
+}
+
+.quiz_wrapper {
+  position: relative;
+  height: 794px;
+  background-color: #225ac7;
+}
+
+.event_quiz {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 694px;
+  transform: translateX(-50%);
+  opacity: 1;
+  z-index: 10;
+}
+.event_quiz .contents {
+  position: relative;
+  width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 0 10px;
+  border-radius: 20px;
+  background-color: #fff;
+  transition: 1s all ease-in-out;
+  transform: translateY(40px);
+  opacity: 0;
+}
+.event_quiz .contents .quiz__tit {
+  display: block;
+  position: absolute;
+  top: -122px;
+  left: 50%;
+  width: 1280px;
+  height: 122px;
+  margin-left: -640px;
+  z-index: 10;
+  background: url("http://img.enuri.info/images/event/2021/empathywork/w_quiztit_bg.png") no-repeat 0 0;
+}
+.event_quiz .contents .quiz__tit .tit {
+  font-size: 38px;
+  color: #fff;
+  letter-spacing: -0.4px;
+  line-height: 122px;
+  vertical-align: middle;
+  text-align: center;
+}
+.event_quiz.intro .contents {
+  transition-delay: 0.5s;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.quiz__item {
+  display: block;
+  padding: 40px 0 60px;
+}
+.quiz__item .q_question {
+  margin-bottom: 45px;
+  text-align: center;
+}
+.quiz__item .q_question .q_count {
+  display: block;
+  margin-bottom: 10px;
+  font: bold 36px/46px "Roboto", Roboto, sans-serif;
+  letter-spacing: -2px;
+  color: #225ac7;
+}
+.quiz__item .q_question .q_txt {
+  display: block;
+  min-height: 138px;
+  font-size: 36px;
+  color: #000;
+  letter-spacing: -0.4px;
+  line-height: 46px;
+  opacity: 0.7;
+}
+.quiz__item .q_example {
+  width: 740px;
+  margin: 0 auto;
+}
+.quiz__item .q_example > li {
+  position: relative;
+  width: 100%;
+  height: 72px;
+  border-radius: 3px;
+  text-align: center;
+  background-color: #ebebeb;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.quiz__item .q_example > li + li {
+  margin-top: 20px;
+}
+.quiz__item .q_example > li em {
+  display: block;
+  font-size: 24px;
+  color: #000;
+  line-height: 72px;
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+}
+.quiz__item .q_example > li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.quiz__item .q_example > li.is-on {
+  background-color: #fff;
+}
+.quiz__item .q_example > li.is-on em {
+  font-weight: bold;
+  color: #225ac7;
+  opacity: 1;
+}
+.quiz__item .q_example > li.is-on:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 2px solid #225ac7;
+  pointer-events: none;
+}
+
+.quiz__loading {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  background-color: #fff;
+}
+.quiz__loading .contents {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url("http://img.enuri.info/images/event/2021/empathywork/m_load_bg.png") bottom center no-repeat;
+  background-size: 290px;
+}
+.quiz__loading .lds-dual-ring {
+  display: inline-block;
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  width: 85px;
+  height: 85px;
+  transform: translateX(-50%);
+}
+.quiz__loading .lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 85px;
+  height: 85px;
+  margin: 0;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 6px solid #225ac7;
+  border-color: #225ac7 transparent #225ac7 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.event_result {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 694px;
+  transform: translateX(-50%);
+  opacity: 0;
+  z-index: 5;
+}
+.event_result .contents {
+  border-radius: 0 0 20px 20px;
+  background-color: #fff;
+}
+.event_result .quiz__tit {
+  display: block;
+  position: absolute;
+  top: -122px;
+  left: 50%;
+  width: 1280px;
+  height: 122px;
+  margin-left: -640px;
+  z-index: 10;
+  background: url("http://img.enuri.info/images/event/2021/empathywork/w_quiztit_bg.png") no-repeat 0 0;
+}
+.event_result .quiz__tit .tit {
+  font-weight: normal;
+  font-size: 38px;
+  color: #fff;
+  letter-spacing: -0.4px;
+  line-height: 122px;
+  vertical-align: middle;
+  text-align: center;
+}
+.event_result .quiz__tit .tit em {
+  font-weight: bold;
+}
+
+.quiz_result_box .result_img {
+  display: block;
+  width: 100%;
+  height: 320px;
+}
+.quiz_result_box .result_img div {
+  display: none;
+}
+.quiz_result_box .result_img div img {
+  width: 100%;
+  height: 320px;
+  vertical-align: middle;
+}
+.quiz_result_box .sns_box {
+  position: relative;
+  padding: 50px 0 45px;
+  border-radius: 0 0 20px 20px;
+  background-color: #f7f7f7;
+}
+.quiz_result_box .sns_tit {
+  width: 153px;
+  height: 22px;
+  margin: 0 auto;
+  font-size: 0;
+  text-indent: -9999px;
+  background: url("http://img.enuri.info/images/event/2021/empathywork/w_result_snstit.png") no-repeat;
+}
+.quiz_result_box .sns_list {
+  margin: 20px auto 50px;
+}
+.quiz_result_box .btn_group {
+  position: relative;
+  width: 754px;
+  height: 97px;
+  margin: 0 auto;
+  background: url("http://img.enuri.info/images/event/2021/empathywork/w_result_btn.png") no-repeat;
+}
+.quiz_result_box .btn_group .btn {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 360px;
+  height: 82px;
+  font-size: 0;
+  text-indent: -9999pr;
+}
+.quiz_result_box .btn_group .btn_result {
+  left: 7px;
+}
+.quiz_result_box .btn_group .btn_restart {
+  right: 7px;
+}
+
+.event_result_list {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 694px;
+  transform: translateX(-50%);
+  opacity: 0;
+  z-index: 5;
+}
+.event_result_list .contents {
+  border-radius: 0 0 20px 20px;
+  background-color: #fff;
+}
+.event_result_list .quiz__tit {
+  display: block;
+  position: absolute;
+  top: -122px;
+  left: 50%;
+  width: 1280px;
+  height: 122px;
+  margin-left: -640px;
+  z-index: 10;
+  background: url("http://img.enuri.info/images/event/2021/empathywork/w_quiztit_bg.png") no-repeat 0 0;
+}
+.event_result_list .quiz__tit .tit {
+  font-weight: normal;
+  font-size: 38px;
+  color: #fff;
+  letter-spacing: -0.4px;
+  line-height: 122px;
+  vertical-align: middle;
+  text-align: center;
+}
+.event_result_list .quiz__tit .tit em {
+  font-weight: bold;
+}
+
+.result_list_box {
+  padding: 50px 0 60px;
+}
+.result_list_box .tx_tit {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #000;
+  letter-spacing: -0.4px;
+  line-height: 1;
+  text-align: center;
+}
+.result_list_box .result_list {
+  width: 740px;
+  margin: 0 auto;
+}
+.result_list_box .result_list li {
+  position: relative;
+  width: 100%;
+  height: 90px;
+  border-radius: 4px;
+  background-color: #ebebeb;
+  cursor: pointer;
+}
+.result_list_box .result_list li:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.result_list_box .result_list li + li {
+  margin-top: 20px;
+}
+.result_list_box .result_list li.is-on {
+  background-color: #fff;
+}
+.result_list_box .result_list li.is-on:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 4px;
+  border: 2px solid #225ac7;
+  pointer-events: none;
+}
+.result_list_box .result_list li .tx_thum {
+  float: left;
+  width: 370px;
+  text-align: center;
+}
+.result_list_box .result_list li .tx_thum > img {
+  display: inline-block;
+  vertical-align: top;
+}
+.result_list_box .result_list li .tx_grade {
+  font-size: 28px;
+  color: #707070;
+  letter-spacing: -0.4px;
+  line-height: 90px;
+}
+.result_list_box .result_list li .tx_grade em {
+  font-weight: bold;
+  color: #000;
+}
+.result_list_box .result_list li.is-on .tx_grade {
+  color: #225ac7;
+}
+.result_list_box .result_list li.is-on .tx_grade em {
+  color: #225ac7;
+}
+
+.com__evt_notice .stress {
+  color: #ff2424;
+}
+
+.evt_notice--btn_area {
+  padding: 16px 0;
+  font-size: 0;
+}
+.evt_notice--btn_area .btn__evt_notice {
+  text-indent: -9999em;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  border: 0;
+  background: url("http://img.enuri.info/images/event/2020/common/com_btn_notice.png") no-repeat 50% 50% transparent;
+  cursor: pointer;
+}
+.evt_notice--btn_area .btn__evt_notice.btn__white {
+  background-image: url("http://img.enuri.info/images/event/2020/common/com_btn_notice_w.png");
+}
+.evt_notice--btn_area .btn__evt_notice.btn__benfit {
+  margin-top: 30px;
+  background-image: url("http://img.enuri.info/images/event/2020/common/com_evt_ben_noti.png");
+}
+
+.evt_notice--layer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+.evt_notice--layer .evt_notice--dimmed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.evt_notice--inner {
+  border: 1px solid #222;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 560px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -280px;
+  background-color: #fff;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  -webkit-transform: translateY(-30%);
+  -ms-transform: translateY(-30%);
+  transform: translateY(-30%);
+  overflow: hidden;
+}
+
+.on .evt_notice--inner {
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  opacity: 1;
+}
+
+.evt_notice--inner.wide {
+  width: 800px;
+  margin-left: -400px;
+}
+
+.evt_notice--head {
+  position: relative;
+  font-weight: bold;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  background-color: #222;
+  padding: 16px;
+  line-height: 36px;
+  z-index: 1;
+  -webkit-box-shadow: 0 16px 10px rgb(255, 255, 255);
+  box-shadow: 0 16px 10px rgb(255, 255, 255);
+}
+
+.evt_notice--cont {
+  padding: 20px;
+  font-size: 15px;
+  line-height: 22px;
+  max-height: 550px;
+  overflow-y: auto;
+  overflow-x: none;
+  text-align: left;
+  letter-spacing: -0.5px;
+}
+.evt_notice--cont .evt_notice--continner .htit {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+}
+.evt_notice--cont .evt_notice--continner .noti {
+  font-size: 13px;
+}
+.evt_notice--cont .evt_notice--continner > ul li {
+  position: relative;
+  margin-top: 6px;
+  padding-left: 16px;
+}
+.evt_notice--cont .evt_notice--continner > ul li:first-child {
+  margin-top: 0;
+}
+.evt_notice--cont .evt_notice--continner > ul li:before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50% 50%;
+  left: 6px;
+  top: 10px;
+  background-color: #222;
+}
+.evt_notice--cont .evt_notice--continner > ul li ul.sub li {
+  position: relative;
+  padding-left: 0;
+}
+.evt_notice--cont .evt_notice--continner > ul li ul.sub li:before {
+  display: none;
+}
+.evt_notice--cont .evt_notice--continner dl {
+  margin-top: 16px;
+  margin-bottom: 26px;
+  line-height: 22px;
+}
+.evt_notice--cont .evt_notice--continner dl:first-of-type {
+  margin-top: 0;
+}
+.evt_notice--cont .evt_notice--continner dl dt {
+  padding-bottom: 3px;
+  color: #222;
+  font-size: 16px;
+  font-weight: bold;
+  font-weight: 500;
+}
+.evt_notice--cont .evt_notice--continner dl dd ul li {
+  position: relative;
+  margin-left: 2px;
+  line-height: 1.4;
+  padding: 2px 0 2px 11px;
+  /* background:url('http://img.enuri.info/images/event/2016/emoney/buy/bul_circle_gray.gif') no-repeat 0 10px; */
+}
+.evt_notice--cont .evt_notice--continner dl dd ul li:before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50% 50%;
+  left: 0;
+  top: 10px;
+  background-color: #222;
+}
+.evt_notice--cont .evt_notice--continner dl dd ul li.stress:before {
+  background-color: #ff2424;
+}
+.evt_notice--cont .evt_notice--continner dl dd ul li .indent {
+  padding-left: 13px;
+}
+.evt_notice--cont .evt_notice--continner dl dd ul.sub {
+  margin-bottom: 10px;
+}
+.evt_notice--cont .evt_notice--continner dl dd ul.sub:last-child {
+  margin-bottom: 0;
+}
+.evt_notice--cont .evt_notice--continner dl dd ul.sub li {
+  position: relative;
+  padding-left: 0;
+}
+.evt_notice--cont .evt_notice--continner dl dd ul.sub li:before {
+  display: none;
+}
+.evt_notice--cont .evt_notice--continner dl dd ul.sub li:first-child {
+  margin-top: 0;
+}
+.evt_notice--cont .evt_notice--continner dl dd ul.sub li strong {
+  font-weight: 500;
+  color: #222;
+}
+.evt_notice--cont .evt_notice--continner .stress {
+  color: #ff2424;
+}
+.evt_notice--cont .evt_notice--continner li.stress:before {
+  background-color: #ff2424;
+}
+.evt_notice--cont .evt_notice--continner .gray {
+  color: #343434;
+}
+.evt_notice--cont .evt_notice--continner li .evt_noti_tb {
+  margin-top: 10px;
+}
+.evt_notice--cont .evt_notice--continner .evt_noti_tb th, .evt_notice--cont .evt_notice--continner .evt_noti_tb td {
+  border: 1px solid #ddd;
+  width: 200px;
+  padding: 4px 0;
+  font-size: 14px;
+  text-align: center;
+}
+.evt_notice--cont .evt_notice--continner .evt_noti_tb th {
+  background-color: #eee;
+}
+.evt_notice--cont .evt_notice--continner .evt_noti_tb td .stress {
+  font-size: 11px;
+  line-height: 14px;
+  margin-top: 4px;
+  color: #e91030;
+}
+.evt_notice--cont .evt_notice--continner .evt_noti_tb + ul {
+  margin-top: 16px;
+}
+.evt_notice--cont .evt_notice--continner .limit {
+  color: #ff2424;
+}
+
+/* .evt_notice--cont .evt_notice--continner {} */
+.evt_notice--foot {
+  padding: 0 20px 20px;
+  position: relative;
+  text-align: center;
+}
+
+.evt_notice--cont .evt_notice--foot {
+  padding: 20px 0 0 0;
+}
+
+.evt_notice--foot .btn__evt_confirm {
+  width: 160px;
+  height: 50px;
+  border: 0;
+  outline: 0;
+  line-height: 50px;
+  font-size: 20px;
+  color: #fff;
+  background: #222;
+}
+.evt_notice--foot:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -20px;
+  right: 0;
+  height: 20px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgb(255, 255, 255)));
+  background: -o-linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255));
+  background: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255));
+}
+
+.evt_notice--inner.wide .evt_notice--foot .btn__evt_confirm {
+  width: 200px;
+}
+
+.btn__evt_close {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  width: 31px;
+  height: 31px;
+  background-image: url("http://img.enuri.info/images/event/2016/emoney/buy/btn_lay_closex.png");
+  text-indent: -9999em;
+  z-index: 2;
+}
+
+.footer {
+  width: 100%;
+  background: url("/assets/images/pattern_foot.jpg") top left repeat;
+  background-size: 128rem;
+}
+
+@media only screen and (max-width: 1279px) {
+  #header, .event01:after {
+    height: auto;
+    background: none;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .reply__list ul li > p {
+    font-size: 4rem;
+    color: #6a6a6a;
+    line-height: 5.2rem;
+    letter-spacing: -0.4px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

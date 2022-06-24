@@ -1,0 +1,1026 @@
+@charset "utf-8";
+
+$mobile-contents-width: 1279px; 
+
+:root {
+    font-size: 10px;
+
+    @media (max-width: $mobile-contents-width) {
+        font-size: calc(100vw / ($mobile-contents-width / 10px));
+    }
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0;
+}
+
+.inner {
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 1280px) {
+    .inner {
+        width: 1280px;
+    }
+}
+
+#header {
+    width: 100%;
+    height: 52.8rem;
+    background: url('/assets/images/pattern_visual.jpg') top center repeat-x;
+    background-size: 1rem;
+
+    .header__logo {
+        font-size: 0;
+        text-indent: -9999px;
+    }
+}
+
+.vodbox__rect {
+    overflow: hidden;
+    position: relative;
+    width: calc(100% - 8.4rem);
+    height: 0;
+    margin: 0 4.2rem;
+    padding-top: 51.25%;
+    border: 1.5rem solid #60d285;
+
+    .vodframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.evt {
+    position: relative;
+}
+    // 이벤트 01
+    .evt--1 {
+        background: #77d898;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 4.4rem;
+            background: url('/assets/images/pattern_wave1.jpg') top center repeat-x;
+            background-size: 19.2rem;
+        }
+
+        .btn--test {
+            margin-bottom: 17rem;
+        }
+    }
+
+    // 이벤트 02
+    .evt--2 {
+        background: #fdea84 url('/assets/images/pattern_event2.jpg') bottom center repeat-x;
+        background-size: 1rem;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 4.6rem;
+            background: url('/assets/images/pattern_wave2.jpg') top center repeat-x;
+            background-size: 19.2rem;
+        }
+    }
+
+.replybox {
+    padding: 0 6.8rem 15rem;
+
+    > form {
+        margin-bottom: 3rem;
+        font-size: 0;
+
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+
+    .ipt--txt {
+        display: inline-block;
+        width: calc(100% - 29.2rem);
+        height: 8.1rem;
+        margin-right: 1.7rem;
+        padding: 0 3.2rem;
+        border-radius: 2rem;
+        border: 0;
+        font-size: 3.7rem;
+        color: #e0cecd;
+        line-height: 8.1rem;
+    }
+
+    .btn--submit {
+        float: right;
+        width: 27.5rem;
+        height: 8.1rem;
+        background: url('/assets/images/event1_btn.jpg') center center no-repeat;
+        background-size: 27.5rem;
+    }
+
+    .reply__list {
+        width: 100%;
+        margin-bottom: 5.5rem;
+        padding: 2rem 6rem;
+        border-radius: 2rem;
+        background-color: #fff;
+
+        > ul li {
+            height: 5.2rem;
+
+            &:after {
+            content: "";
+                display: table;
+                clear: both;
+            }
+
+            > p {
+                font-size: 2.6rem;
+                color: #6a6a6a;
+                line-height: 5.2rem;
+                letter-spacing: -.4px;
+
+                &.tx_msg {
+                    float: left;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    width: calc(100% - 25rem);
+                }
+
+                &.tx_nm {
+                    float: right;
+                    width: 20rem;
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .reply__paging {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        > a {
+            flex: 0 1 auto;
+            width: 8.4rem;
+            height: 8.4rem;
+            border-radius: 1.4rem;
+            font-size: 4.2rem;
+            color: #9a9696;
+            text-align: center;
+            line-height: 8.2rem;
+            vertical-align: middle;
+            background-color: #fff;
+            transition: opacity .3s ease-in-out;
+            -webkit-transition: opacity .3s ease-in-out;
+            -o-transition: opacity .3s ease-in-out;
+
+            &:hover {
+                opacity: .8;
+            }
+
+            &.on {
+                color: #ffe96f;
+                background-color: #6350aa;
+            }
+
+            &.arrow {
+                font-size: 0;
+                text-indent: -9999px;
+                background-image: url('/assets/images/sprite_arrow.jpg');
+                background-size: 16.8rem;
+
+                &.first {
+                    background-position: 0 0;
+                }
+
+                &.prev {
+                    background-position: -8.4rem 0;
+                }
+
+                &.last {
+                    background-position: 0 -8.4rem;
+                }
+
+                &.next {
+                    background-position: -8.4rem -8.4rem;
+                }
+            }
+        }
+    }
+}
+
+.notice {
+    width: 100%;
+    background-color: #020101;
+
+    &__info {
+        padding: 8rem 7.5rem;
+
+        > {
+            dt {
+                margin-bottom: 3.5rem;
+                font-weight: 300;
+                font-size: 2.6rem;
+                color: #ada8a5;
+                letter-spacing: -.4px;
+                line-height: 4.4rem;
+            }
+
+            dd {
+                font-weight: 300;
+                font-size: 2.6rem;
+                color: #ada8a5;
+                letter-spacing: -.4px;
+                line-height: 4.4rem;
+            }
+        }
+    }
+}
+
+// 퀴즈 페이지
+.quiz_wrapper {
+    position: relative;
+    height: 794px;
+    background-color: #225ac7;
+}
+  
+// 퀴즈 풀기  
+.event_quiz {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 694px;
+    transform: translateX(-50%);
+    opacity: 1;
+    z-index: 10;
+  
+    .contents {
+        position: relative;
+        width: 1280px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 0 10px;
+        border-radius: 20px;
+        background-color: #fff;
+  
+        .quiz__tit {
+            display: block;
+            position: absolute;
+            top: -122px;
+            left: 50%;
+            width: 1280px;
+            height: 122px;
+            margin-left: -640px;
+            z-index: 10;
+            background: url('http://img.enuri.info/images/event/2021/empathywork/w_quiztit_bg.png') no-repeat 0 0;
+    
+            .tit {
+                font-size: 38px;
+                color: #fff;
+                letter-spacing: -.4px;
+                line-height: 122px;
+                vertical-align: middle;
+                text-align: center;
+            }
+        }
+    
+        transition: 1s all ease-in-out;
+        transform: translateY(40px);
+        opacity: 0;
+    }
+  
+    &.intro .contents {
+        transition-delay: .5s;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+  
+// 모션  
+.quiz__item {
+    display: block;
+    padding: 40px 0 60px;
+
+    .q_question {
+        margin-bottom: 45px;
+        text-align: center;
+
+        .q_count {
+            display: block;
+            margin-bottom: 10px;
+            font: bold 36px/46px "Roboto", Roboto, sans-serif;
+            letter-spacing: -2px;
+            color: #225ac7;
+        }
+
+        .q_txt {
+            display: block;
+            min-height: 138px;
+            font-size: 36px;
+            color: #000;
+            letter-spacing: -.4px;
+            line-height: 46px;
+            opacity: .7;
+        }
+    }
+
+    .q_example {
+        width: 740px;
+        margin: 0 auto;
+
+        > li {
+            position: relative;
+            width: 100%;
+            height: 72px;
+            border-radius: 3px;
+            text-align: center;
+            background-color: #ebebeb;
+            transition: all .2s ease-in-out;
+            cursor: pointer;
+
+            + li {
+                margin-top: 20px;
+            }
+
+            em {
+                display: block;
+                font-size: 24px;
+                color: #000;
+                line-height: 72px;
+                opacity: .7;
+                transition: all .2s ease-in-out;
+            }
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+
+            &.is-on {
+                background-color: #fff;
+
+                em {
+                    font-weight: bold;
+                    color: #225ac7;
+                    opacity: 1;
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    border: 2px solid #225ac7;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}
+
+// 퀴즈 로딩
+
+.quiz__loading {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    background-color: #fff;
+
+    .contents {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: url('http://img.enuri.info/images/event/2021/empathywork/m_load_bg.png') bottom center no-repeat;
+        background-size: 290px;
+    }
+
+    .lds-dual-ring {
+        display: inline-block;
+        position: absolute;
+        top: 170px;
+        left: 50%;
+        width: 85px;
+        height: 85px;
+        transform: translateX(-50%);
+
+        &:after {
+            content: " ";
+            display: block;
+            width: 85px;
+            height: 85px;
+            margin: 0;
+            border-radius: 50%;
+            box-sizing: border-box;
+            border: 6px solid #225ac7;
+            border-color: #225ac7 transparent #225ac7 transparent;
+            animation: lds-dual-ring 1.2s linear infinite;
+        }
+    }
+}
+  
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+  
+    100% {
+        transform: rotate(360deg);
+    }
+}
+  
+// 퀴즈 결과  
+.event_result {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 694px;
+    transform: translateX(-50%);
+    opacity: 0;
+    z-index: 5;
+  
+    .contents {
+        border-radius: 0 0 20px 20px;
+        background-color: #fff;
+    }
+  
+    .quiz__tit {
+        display: block;
+        position: absolute;
+        top: -122px;
+        left: 50%;
+        width: 1280px;
+        height: 122px;
+        margin-left: -640px;
+        z-index: 10;
+        background: url('http://img.enuri.info/images/event/2021/empathywork/w_quiztit_bg.png') no-repeat 0 0;
+  
+        .tit {
+            font-weight: normal;
+            font-size: 38px;
+            color: #fff;
+            letter-spacing: -.4px;
+            line-height: 122px;
+            vertical-align: middle;
+            text-align: center;
+    
+            em {
+                font-weight: bold;
+            }
+        }
+    }
+}
+  
+.quiz_result_box {
+    .result_img {
+        display: block;
+        width: 100%;
+        height: 320px;
+
+        div {
+            display: none;
+
+            img {
+                width: 100%;
+                height: 320px;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .sns_box {
+        position: relative;
+        padding: 50px 0 45px;
+        border-radius: 0 0 20px 20px;
+        background-color: #f7f7f7;
+    }
+
+    .sns_tit {
+        width: 153px;
+        height: 22px;
+        margin: 0 auto;
+        font-size: 0;
+        text-indent: -9999px;
+        background: url('http://img.enuri.info/images/event/2021/empathywork/w_result_snstit.png') no-repeat;
+    }
+
+    .sns_list {
+        margin: 20px auto 50px;
+    }
+
+    .btn_group {
+        position: relative;
+        width: 754px;
+        height: 97px;
+        margin: 0 auto;
+        background: url('http://img.enuri.info/images/event/2021/empathywork/w_result_btn.png') no-repeat;
+
+        .btn {
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 360px;
+            height: 82px;
+            font-size: 0;
+            text-indent: -9999pr;
+        }
+
+        .btn_result {
+            left: 7px;
+        }
+
+        .btn_restart {
+            right: 7px;
+        }
+    }
+}
+  
+.event_result_list {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 694px;
+    transform: translateX(-50%);
+    opacity: 0;
+    z-index: 5;
+
+    .contents {
+        border-radius: 0 0 20px 20px;
+        background-color: #fff;
+    }
+
+    .quiz__tit {
+        display: block;
+        position: absolute;
+        top: -122px;
+        left: 50%;
+        width: 1280px;
+        height: 122px;
+        margin-left: -640px;
+        z-index: 10;
+        background: url('http://img.enuri.info/images/event/2021/empathywork/w_quiztit_bg.png') no-repeat 0 0;
+
+        .tit {
+            font-weight: normal;
+            font-size: 38px;
+            color: #fff;
+            letter-spacing: -.4px;
+            line-height: 122px;
+            vertical-align: middle;
+            text-align: center;
+
+            em {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.result_list_box {
+    padding: 50px 0 60px;
+
+    .tx_tit {
+        display: block;
+        margin-bottom: 30px;
+        font-size: 24px;
+        color: #000;
+        letter-spacing: -.4px;
+        line-height: 1;
+        text-align: center;
+    }
+
+    .result_list {
+        width: 740px;
+        margin: 0 auto;
+
+        li {
+            position: relative;
+            width: 100%;
+            height: 90px;
+            border-radius: 4px;
+            background-color: #ebebeb;
+            cursor: pointer;
+
+            &:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            + li {
+                margin-top: 20px;
+            }
+
+            &.is-on {
+                background-color: #fff;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    border-radius: 4px;
+                    border: 2px solid #225ac7;
+                    pointer-events: none;
+                }
+            }
+
+        .tx_thum {
+            float: left;
+            width: 370px;
+            text-align: center;
+
+            > img {
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+
+        .tx_grade {
+            font-size: 28px;
+            color: #707070;
+            letter-spacing: -.4px;
+            line-height: 90px;
+
+            em {
+                font-weight: bold;
+                color: #000;
+            }
+        }
+
+        &.is-on .tx_grade {
+            color: #225ac7;
+
+            em {
+                color: #225ac7;
+            }
+        }
+        }
+    }
+}
+
+// 이벤트 공통 유의사항
+.com__evt_notice .stress {
+    color: #ff2424;
+  }
+  
+  .evt_notice--btn_area {
+    padding: 16px 0;
+    font-size: 0;
+  
+    .btn__evt_notice {
+      text-indent: -9999em;
+      width: 200px;
+      height: 50px;
+      margin: 0 auto;
+      border: 0;
+      background: url('http://img.enuri.info/images/event/2020/common/com_btn_notice.png') no-repeat 50% 50% transparent;
+      cursor: pointer;
+  
+      &.btn__white {
+        background-image: url('http://img.enuri.info/images/event/2020/common/com_btn_notice_w.png');
+      }
+  
+      &.btn__benfit {
+        margin-top: 30px;
+        background-image: url('http://img.enuri.info/images/event/2020/common/com_evt_ben_noti.png');
+      }
+    }
+  }
+  
+  .evt_notice--layer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+  
+    .evt_notice--dimmed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+  
+  .evt_notice--inner {
+    border: 1px solid #222;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 560px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -280px;
+    background-color: #fff;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: .3s all ease-in-out;
+    -o-transition: .3s all ease-in-out;
+    transition: .3s all ease-in-out;
+    -webkit-transform: translateY(-30%);
+    -ms-transform: translateY(-30%);
+    transform: translateY(-30%);
+    overflow: hidden;
+  }
+  
+  .on .evt_notice--inner {
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+  
+  .evt_notice--inner.wide {
+    width: 800px;
+    margin-left: -400px;
+  }
+  
+  .evt_notice--head {
+    position: relative;
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    background-color: #222;
+    padding: 16px;
+    line-height: 36px;
+    z-index: 1;
+    -webkit-box-shadow: 0 16px 10px rgba(255, 255, 255, 1);
+    box-shadow: 0 16px 10px rgba(255, 255, 255, 1);
+  }
+  
+  .evt_notice--cont {
+    padding: 20px;
+    font-size: 15px;
+    line-height: 22px;
+    max-height: 550px;
+    overflow-y: auto;
+    overflow-x: none;
+    text-align: left;
+    letter-spacing: -.5px;
+  
+    .evt_notice--continner {
+      .htit {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #222;
+      }
+  
+      .noti {
+        font-size: 13px;
+      }
+  
+      > ul li {
+        position: relative;
+        margin-top: 6px;
+        padding-left: 16px;
+  
+        &:first-child {
+          margin-top: 0;
+        }
+  
+        &:before {
+          content: "";
+          position: absolute;
+          width: 4px;
+          height: 4px;
+          border-radius: 50% 50%;
+          left: 6px;
+          top: 10px;
+          background-color: #222;
+        }
+  
+        ul.sub li {
+          &:before {
+            display: none;
+          }
+  
+          position: relative;
+          padding-left: 0;
+        }
+      }
+  
+      dl {
+        margin-top: 16px;
+        margin-bottom: 26px;
+        line-height: 22px;
+  
+        &:first-of-type {
+          margin-top: 0;
+        }
+  
+        dt {
+          padding-bottom: 3px;
+          color: #222;
+          font-size: 16px;
+          font-weight: bold;
+          font-weight: 500;
+        }
+  
+        dd ul {
+          li {
+            position: relative;
+            margin-left: 2px;
+            line-height: 1.4;
+            padding: 2px 0 2px 11px;
+  
+            /* background:url('http://img.enuri.info/images/event/2016/emoney/buy/bul_circle_gray.gif') no-repeat 0 10px; */
+  
+            &:before {
+              content: "";
+              position: absolute;
+              width: 4px;
+              height: 4px;
+              border-radius: 50% 50%;
+              left: 0;
+              top: 10px;
+              background-color: #222;
+            }
+  
+            &.stress:before {
+              background-color: #ff2424;
+            }
+  
+            .indent {
+              padding-left: 13px;
+            }
+          }
+  
+          &.sub {
+            margin-bottom: 10px;
+  
+            &:last-child {
+              margin-bottom: 0;
+            }
+  
+            li {
+              position: relative;
+              padding-left: 0;
+  
+              &:before {
+                display: none;
+              }
+  
+              &:first-child {
+                margin-top: 0;
+              }
+  
+              strong {
+                font-weight: 500;
+                color: #222;
+              }
+            }
+          }
+        }
+      }
+  
+      .stress {
+        color: #ff2424;
+      }
+  
+      li.stress:before {
+        background-color: #ff2424;
+      }
+  
+      .gray {
+        color: #343434;
+      }
+  
+      li .evt_noti_tb {
+        margin-top: 10px;
+      }
+  
+      .evt_noti_tb {
+        th, td {
+          border: 1px solid #ddd;
+          width: 200px;
+          padding: 4px 0;
+          font-size: 14px;
+          text-align: center;
+        }
+  
+        th {
+          background-color: #eee;
+        }
+  
+        td .stress {
+          font-size: 11px;
+          line-height: 14px;
+          margin-top: 4px;
+          color: #e91030;
+        }
+  
+        + ul {
+          margin-top: 16px;
+        }
+      }
+  
+      .limit {
+        color: #ff2424;
+      }
+    }
+  }
+  
+  /* .evt_notice--cont .evt_notice--continner {} */
+  
+  .evt_notice--foot {
+    padding: 0 20px 20px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .evt_notice--cont .evt_notice--foot {
+    padding: 20px 0 0 0;
+  }
+  
+  .evt_notice--foot {
+    .btn__evt_confirm {
+      width: 160px;
+      height: 50px;
+      border: 0;
+      outline: 0;
+      line-height: 50px;
+      font-size: 20px;
+      color: #fff;
+      background: #222;
+    }
+  
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -20px;
+      right: 0;
+      height: 20px;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 1)));
+      background: -o-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+      background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    }
+  }
+  
+  .evt_notice--inner.wide .evt_notice--foot .btn__evt_confirm {
+    width: 200px;
+  }
+  
+  .btn__evt_close {
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    width: 31px;
+    height: 31px;
+    background-image: url('http://img.enuri.info/images/event/2016/emoney/buy/btn_lay_closex.png');
+    text-indent: -9999em;
+    z-index: 2;
+  }
+
+.footer {
+    width: 100%;
+    background: url('/assets/images/pattern_foot.jpg') top left repeat;
+    background-size: 128rem;
+}
+
+@media only screen and (max-width: 1279px) {
+    #header, .event01:after {
+        height: auto;
+        background: none;
+    }
+}
+
+@media only screen and (max-width: 639px) {
+    .reply__list {
+        ul li {
+            > p {
+                font-size: 4rem;
+                color: #6a6a6a;
+                line-height: 5.2rem;
+                letter-spacing: -.4px;
+            }
+        }
+    }
+}
